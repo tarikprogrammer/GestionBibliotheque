@@ -1,8 +1,8 @@
 pipeline {
-   /*  agent any
+   agent any
    tools {
           maven 'Maven'
-    } */
+    }
     stages {
         /* stage('Checkout') {
             steps {
@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Quality Analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('sonarQube') {
                     sh 'mvn sonar:sonar'
                 }
             }
