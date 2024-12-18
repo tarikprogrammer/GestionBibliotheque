@@ -9,11 +9,16 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/tarikprogrammer/GestionBibliotheque.git'
             }
         }
-        stage('Build') {
+        stage('clean') {
             steps {
-                sh 'mvn clean install'
+                sh 'mvn clean'
             }
         }
+        stage('compile') {
+                    steps {
+                        sh 'mvn compile'
+                    }
+                }
        /*  stage('Quality Analysis') {
             steps {
                 withSonarQubeEnv('sonarQube') {

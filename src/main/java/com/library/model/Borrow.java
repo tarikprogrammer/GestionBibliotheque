@@ -9,7 +9,7 @@ public class Borrow {
     private Date borrowDate;
     private Date returnDate;
 
-    // Constructeur complet
+    // Constructor with id, student, book, borrowDate, and returnDate
     public Borrow(int id, Student student, Book book, Date borrowDate, Date returnDate) {
         this.id = id;
         this.student = student;
@@ -18,13 +18,15 @@ public class Borrow {
         this.returnDate = returnDate;
     }
 
-    public Borrow(String name, String title, Date date, Object borrowDate) {
-       this.student.setName(name);
-       this.book.setTitle(title);
-       this.borrowDate = date;
+    // Constructor without id (used for saving new entries)
+    public Borrow(Student student, Book book, Date borrowDate, Date returnDate) {
+        this.student = student;
+        this.book = book;
+        this.borrowDate = borrowDate;
+        this.returnDate = returnDate;
     }
 
-    // Getters et Setters
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -43,6 +45,17 @@ public class Borrow {
 
     public Book getBook() {
         return book;
+    }
+
+    @Override
+    public String toString() {
+        return "Borrow{" +
+                "id=" + id +
+                ", student=" + student +
+                ", book=" + book +
+                ", borrowDate=" + borrowDate +
+                ", returnDate=" + returnDate +
+                '}';
     }
 
     public void setBook(Book book) {

@@ -11,14 +11,14 @@ public class BookDAO {
 
     // Ajouter un nouveau livre dans la base de données
     public void add(Book book) {
-        String sql = "INSERT INTO books (title, author, isbn, published_year) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO books (id,title, author, isbn, published_year) VALUES (?,?, ?, ?, ?)";
         try (Connection connection = DbConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
-             
-            statement.setString(1, book.getTitle());
-            statement.setString(2, book.getAuthor());
-            statement.setString(3, book.getIsbn());
-            statement.setInt(4, book.getPublishedYear());
+            statement.setInt(1, book.getId());
+            statement.setString(2, book.getTitle());
+            statement.setString(3, book.getAuthor());
+            statement.setString(4, book.getIsbn());
+            statement.setInt(5, book.getPublishedYear());
             
             int rowsInserted = statement.executeUpdate();
             if (rowsInserted > 0) {

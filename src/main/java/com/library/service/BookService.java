@@ -12,6 +12,11 @@ public class BookService {
         this.bookDAO = new BookDAO();
     }
 
+
+    public BookService(){
+
+    }
+
     // Ajouter un livre
     public void addBook(Book book) {
         bookDAO.add(book);

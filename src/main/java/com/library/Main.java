@@ -74,9 +74,8 @@ public class Main {
                     Student studentForBorrow = studentService.findStudentById(studentId);
                     Book bookForBorrow = bookService.findBookById(bookId);
                     if (studentForBorrow != null && bookForBorrow != null) {
-                        // Créer un objet Borrow avec les informations nécessaires
-                        Borrow borrow1 = new Borrow(studentForBorrow.getName(), bookForBorrow.getTitle(), new Date(), null);
-                        borrowService.borrowBook(borrow1);  // Appel de la méthode avec l'objet Borrow
+                        Borrow borrow1 = new Borrow(studentForBorrow, bookForBorrow, new Date(), new Date());
+                        borrowService.borrowBook(borrow1);
                     } else {
                         System.out.println("Étudiant ou livre introuvable.");
                     }

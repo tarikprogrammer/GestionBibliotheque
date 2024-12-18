@@ -30,7 +30,8 @@ public class BorrowService {
     // Afficher les emprunts (méthode fictive, à adapter)
     public void displayBorrows() {
         System.out.println("Liste des emprunts...");
-        // Afficher les emprunts enregistrés (adapté selon votre DAO)
+        borrowDAO.getAllBorrows().forEach(System.out::println);
+
     }
 
     public String borrowBook(int i, int i1) {

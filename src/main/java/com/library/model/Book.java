@@ -10,6 +10,18 @@ public class Book {
     private int publishedYear;
 
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", publisher='" + publisher + '\'' +
+                ", year=" + year +
+                ", isbn='" + isbn + '\'' +
+                ", publishedYear=" + publishedYear +
+                '}';
+    }
 
     public Book(String title, String author, String publisher, int year) {
         this.title = title;

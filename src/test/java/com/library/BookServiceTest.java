@@ -20,7 +20,8 @@ class BookServiceTest {
 
     @Test
     void testAddBook() {
-        Book book = new Book("1", "Java Programming", "John Doe", 2020);
+        Book book = new Book("Java Programming", "tarik belaid", "John Doe", 2020);
+        book.setId(1);
         bookService.addBook(book);
         assertEquals(1, bookDAO.getAllBooks().size());
         assertEquals("Java Programming", bookDAO.getBookById(1).get().getTitle());
@@ -28,16 +29,16 @@ class BookServiceTest {
 
     @Test
     void testUpdateBook() {
-        Book book = new Book("1", "Java Programming", "John Doe", 2020);
+        Book book = new Book("Advanced Java", "tarik belaid", "John Doe", 2020);
         bookService.addBook(book);
-        bookService.updateBook(1, "Advanced Java", "Jane Doe", false);
-        assertEquals("Advanced Java", bookDAO.getBookById(1).get().getTitle());
+        bookService.updateBook(book);
+        assertEquals("Advanced Java", bookDAO.getBookById(1).getTitle());
         assertFalse(bookDAO.getBookById(1).get().isAvailable());
     }
 
     @Test
     void testDeleteBook() {
-        Book book = new Book("1", "Java Programming", "John Doe", 2020);
+        Book book = new Book("Advanced Java", "tarik belaid", "John Doe", 2020);
         bookService.addBook(book);
         bookService.deleteBook(1);
         assertTrue(String.valueOf(bookDAO.getBookById(1)).isEmpty());
