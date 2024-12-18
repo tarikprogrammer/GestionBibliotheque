@@ -11,18 +11,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh '${MAVEN_HOME}/bin/mvn clean compile'
+                sh 'mvn clean compile'
             }
         }
         stage('Test') {
             steps {
-                sh '${MAVEN_HOME}/bin/mvn test'
+                sh 'mvn test'
             }
         }
         stage('Quality Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    sh '${MAVEN_HOME}/bin/mvn sonar:sonar'
+                    sh 'mvn sonar:sonar'
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
             }
         }
     }
-    post {
+    /* post {
         success {
             emailext to: 'belaid.tarikk@gmail.com',
                 subject: 'Build Success',
@@ -43,5 +43,5 @@ pipeline {
                 subject: 'Build Failed',
                 body: 'Le build a échoué.'
         }
-    }
+    } */
 }
