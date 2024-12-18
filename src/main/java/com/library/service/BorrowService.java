@@ -16,6 +16,11 @@ public class BorrowService {
         this.borrowDAO = borrowDAO;
     }
 
+    public BorrowService(BookDAO bookDAO, StudentDAO studentDAO) {
+
+    }
+
+
     // Méthode pour emprunter un livre
     public void borrowBook(Borrow borrow) {
         // Sauvegarde de l'emprunt dans la base de données
@@ -26,5 +31,13 @@ public class BorrowService {
     public void displayBorrows() {
         System.out.println("Liste des emprunts...");
         // Afficher les emprunts enregistrés (adapté selon votre DAO)
+    }
+
+    public String borrowBook(int i, int i1) {
+        return null;
+    }
+
+    public String returnBook(int i, int i1) {
+        return null;
     }
 }

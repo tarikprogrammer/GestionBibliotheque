@@ -1,4 +1,4 @@
-package com.library.test;
+package com.library;
 
 import com.library.dao.BookDAO;
 import com.library.dao.StudentDAO;
@@ -26,8 +26,8 @@ class BorrowServiceTest {
         studentDAO.addStudent(new Student(2, "Bob", "bob@example.com"));
 
         // Ajouter des livres
-        bookDAO.addBook(new Book(1, "Java Programming", "John Doe", true));
-        bookDAO.addBook(new Book(2, "Advanced Java", "Jane Doe", true));
+        bookDAO.addBook(new Book("1", "Java Programming", "John Doe", 2020));
+        bookDAO.addBook(new Book("2", "Advanced Java", "Jane Doe", 2020));
     }
 
     @Test

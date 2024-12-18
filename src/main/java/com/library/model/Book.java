@@ -97,4 +97,12 @@ public class Book {
     public void setYear(int year) {
         this.year = year;
     }
+
+    public Book get() {
+        return this;
+    }
+
+    public boolean isAvailable() {
+        return true;
+    }
 }

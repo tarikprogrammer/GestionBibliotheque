@@ -126,4 +126,8 @@ public class BookDAO {
             e.printStackTrace();
         }
     }
+
+    public void addBook(Book book) {
+
+    }
 }

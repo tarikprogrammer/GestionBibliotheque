@@ -1,5 +1,6 @@
 package com.library;
 
+import com.library.dao.BookDAO;
 import com.library.service.BorrowService;
 import com.library.service.BookService;
 import com.library.service.StudentService;
@@ -15,7 +16,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Création des services
-        BookService bookService = new BookService();
+        BookDAO bookDAO = new BookDAO();
+        BookService bookService = new BookService(bookDAO);
         Student student = new Student(1, "John Doe");
         StudentService studentService = new StudentService();
         BorrowDAO borrowDAO = new BorrowDAO();  // Création de BorrowDAO

@@ -49,4 +49,14 @@ public class StudentService {
         }
         return null;
     }
+
+    public void addStudent(int i, String alice, String mail) {
+    }
+
+    public void updateStudent(int i, String aliceSmith) {
+        
+    }
+
+    public void deleteStudent(int i) {
+    }
 }
