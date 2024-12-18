@@ -1,14 +1,14 @@
 pipeline {
-    agent any
+   /*  agent any
    tools {
           maven 'Maven'
-    }
+    } */
     stages {
-        stage('Checkout') {
+        /* stage('Checkout') {
             steps {
                 git 'https://github.com/votre-depot/GestionBibliotheque.git'
             }
-        }
+        } */
         stage('Build') {
             steps {
                 sh 'mvn clean compile'
