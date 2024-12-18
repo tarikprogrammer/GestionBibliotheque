@@ -116,12 +116,16 @@ public class BookDAO {
     }
 
     public void update(Book book) {
-        String Sql = "SELECT * FROM books WHERE id = ?";
+        String updateSql = "UPDATE books SET title = ?, author = ?, publisher = ?, year = ? WHERE id = ?";
         try {
             Connection connection = DbConnection.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(Sql);
-            preparedStatement.setInt(1, book.getId());
-            preparedStatement.executeUpdate();
+            PreparedStatement preparedStatement = connection.prepareStatement(updateSql);
+            preparedStatement.setString(1,book.getTitle());
+            preparedStatement.setString(2,book.getAuthor());
+            preparedStatement.setString(3,book.getIsbn());
+            preparedStatement.setInt(4,book.getPublishedYear());
+            preparedStatement.setInt(5,book.getId());
+             preparedStatement.executeUpdate();
         }catch (Exception e){
             e.printStackTrace();
         }

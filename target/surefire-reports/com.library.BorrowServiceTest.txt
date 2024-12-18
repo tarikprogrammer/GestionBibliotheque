@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.library.BorrowServiceTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1.031 s <<< FAILURE! -- in com.library.BorrowServiceTest
-com.library.BorrowServiceTest.testBorrowBookStudentNotFound -- Time elapsed: 0.795 s <<< FAILURE!
+Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 1.046 s <<< FAILURE! -- in com.library.BorrowServiceTest
+com.library.BorrowServiceTest.testBorrowBookStudentNotFound -- Time elapsed: 0.921 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <Étudiant ou livre non trouvé.> but was: <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -15,7 +15,7 @@ org.opentest4j.AssertionFailedError: expected: <Étudiant ou livre non trouvé.>
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 
-com.library.BorrowServiceTest.testBorrowBookNotAvailable -- Time elapsed: 0.067 s <<< FAILURE!
+com.library.BorrowServiceTest.testBorrowBookNotAvailable -- Time elapsed: 0.044 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <Le livre n'est pas disponible.> but was: <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -28,7 +28,7 @@ org.opentest4j.AssertionFailedError: expected: <Le livre n'est pas disponible.> 
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 
-com.library.BorrowServiceTest.testReturnBook -- Time elapsed: 0.067 s <<< FAILURE!
+com.library.BorrowServiceTest.testReturnBook -- Time elapsed: 0.026 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <Livre retourné avec succès!> but was: <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -41,7 +41,7 @@ org.opentest4j.AssertionFailedError: expected: <Livre retourné avec succès!> b
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 
-com.library.BorrowServiceTest.testBorrowBook -- Time elapsed: 0.078 s <<< FAILURE!
+com.library.BorrowServiceTest.testBorrowBook -- Time elapsed: 0.029 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <Livre emprunté avec succès!> but was: <null>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)

@@ -19,13 +19,13 @@ pipeline {
                         sh 'mvn compile'
                     }
                 }
-       /*  stage('Quality Analysis') {
-            steps {
-                withSonarQubeEnv('sonarQube') {
-                    sh 'mvn sonar:sonar -Dsonar.projectKey=GestionBibliotheque -Dsonar.host.url=http://votre-sonar-url -Dsonar.login=votre-token'
-                }
-            }
-        } */
+       stage('SonarQube Analysis') {
+                   steps {
+                       withSonarQubeEnv(sonarQube) {
+                           sh 'mvn sonar:sonar -Dsonar.projectKey=sqp_410a23b5d566db858cc83d23ad97996d5a932d74 -Dsonar.host.url=http://localhost:9000'
+                       }
+                   }
+               }
         stage('Deploy') {
             steps {
                 echo 'Déploiement simulé réussi'
