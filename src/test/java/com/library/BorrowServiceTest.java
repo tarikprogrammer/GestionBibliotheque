@@ -1,4 +1,3 @@
-/*
 package com.library;
 
 import com.library.dao.BookDAO;
@@ -55,4 +54,3 @@ class BorrowServiceTest {
         assertEquals("Étudiant ou livre non trouvé.", borrowService.borrowBook(3, 1));
     }
 }
-*/

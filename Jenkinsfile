@@ -22,7 +22,8 @@ pipeline {
        stage('SonarQube Analysis') {
                    steps {
                        withSonarQubeEnv('sonarQube') {
-                           sh 'mvn clean package sonar:sonar'
+                           sh 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_9cdc87eade7fc3d89741c71a05063f6a22e76792'
+
                        }
                    }
                }
