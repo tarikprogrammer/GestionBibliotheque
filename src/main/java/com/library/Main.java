@@ -13,8 +13,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
+        StudentService studentService = new StudentService();
+        System.out.println(studentService.findStudentById(1));
+        Student student = studentService.findStudentById(1);
+        student.setName("tttrtr");
+        studentService.updateStudent(student);
+        /*Scanner scanner = new Scanner(System.in);
         // Création des services
         BookDAO bookDAO = new BookDAO();
         BookService bookService = new BookService(bookDAO);
@@ -95,6 +99,6 @@ public class Main {
             }
         }
 
-        scanner.close();
+        scanner.close();*/
     }
 }

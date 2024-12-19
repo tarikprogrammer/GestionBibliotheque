@@ -50,14 +50,14 @@ public class StudentService {
         return null;
     }
 
-    public void addStudent(int i, String alice, String mail) {
-    }
 
-    public void updateStudent(int i, String aliceSmith) {
+    public void updateStudent(Student student) {
+        studentDAO.updateStudent(student);
         
     }
 
-    public void deleteStudent(int i) {
+    public void deleteStudent(int id) {
+        studentDAO.deleteStudent(id);
 
     }
 }

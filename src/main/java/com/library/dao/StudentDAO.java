@@ -23,11 +23,12 @@ public class StudentDAO {
     }
 
     public void addStudent(Student student) {
-        String query = "INSERT INTO students ( name) VALUES (?)";
+        String query = "INSERT INTO students (id,name) VALUES (?,?)";
         try  {
             connection = DbConnection.getConnection();
             PreparedStatement statement = connection.prepareStatement(query);
-            statement.setString(1, student.getName());
+            statement.setInt(1, student.getId());
+            statement.setString(2, student.getName());
             statement.executeUpdate();
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, "Erreur lors de l'ajout de l'étudiant", e);
