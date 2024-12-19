@@ -18,7 +18,11 @@ pipeline {
                     steps {
                         sh 'mvn compile'
                     }
-                }
-    
+       }
+        stage('send email'){
+            steps {
+                mail bcc: '', body: '''Bonjour,
+                 nouvelle notification concernant le projet de gestion de bibliotheque ''', cc: '', from: '', replyTo: '', subject: 'Notifications du projet de  Gestion des biblio', to: 'belaid.tarikk@gmail.com'
+            }
     }
 }
