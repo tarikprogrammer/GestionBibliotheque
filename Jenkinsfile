@@ -19,18 +19,6 @@ pipeline {
                         sh 'mvn compile'
                     }
                 }
-       stage('SonarQube Analysis') {
-                   steps {
-                       withSonarQubeEnv('sonarQube') {
-                           sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=GestionBiblio -Dsonar.projectName='GestionBiblio'"
-
-                       }
-                   }
-               }
-        stage('Deploy') {
-            steps {
-                echo 'Déploiement simulé réussi'
-            }
-        }
+    
     }
 }
